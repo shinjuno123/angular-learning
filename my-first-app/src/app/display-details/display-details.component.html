@@ -1,0 +1,15 @@
+<button
+    class="btn btn-primary"
+    (click)="onToggle()"
+>Toggle Displaying Details</button>
+
+<p *ngIf="hideDetails else details"></p>
+<p *ngFor="let buttonClickLog of buttonClickLogs; let idx = index" 
+    [ngClass]="{greaterThanOrEqualTo5Logs: idx + 1 >= 5? true: false}" 
+    [ngStyle]="{backgroundColor: idx + 1 >= 5? 'blue':'transparent'}">
+    {{(idx + 1) + ' ' + buttonClickLog}}
+</p>
+
+<ng-template #details>
+    <p>Secret Password = tuna</p>
+</ng-template>
