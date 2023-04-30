@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { timestamp } from 'rxjs';
 
 @Component({
   selector: 'display-details',

@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="row">
+
+        <app-game-control (gameEvent)="OnGameEventHappened($event)"></app-game-control>
+
+        <div class="col-md-10">
+            <app-odd *ngIf="!isEven && status" [count]="status.count"></app-odd>
+            <app-even *ngIf="isEven && status" [count]="status.count"></app-even>
+        </div>
+    </div>
+</div>
