@@ -6,10 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  pageName:string = 'Recipes';
 
-  onPageChanged(pageName: string){
-    this.pageName = pageName;
-  }
 
 }
